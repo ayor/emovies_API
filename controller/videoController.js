@@ -5,7 +5,8 @@ exports.getVideos = async (req, res, next) => {
     const page = +req.query.page || 1;
 
     try {
-        const numberOfVideos = await Video.countDocuments();
+        const numberOfVideos = await Video.find()
+        .countDocuments();
 
 
         
