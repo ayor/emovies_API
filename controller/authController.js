@@ -36,10 +36,13 @@ exports.signin = async (req, res, next) => {
             id: customer._id
         }, JWT_SECRET, { expiresIn: '1h' });
 
+        const expiryDate = Date.now() + 3600000;
+
         res.status(200)
             .json({
                 token,
-                data: customer
+                data: customer,
+                expiresIn : new Date(expiryDate) 
             })
     } catch (error) {
         if (!error.statusCode) {

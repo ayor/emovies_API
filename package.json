@@ -3,19 +3,28 @@
   "version": "1.0.0",
   "description": "a rest api that serves the video rental application",
   "main": "app.js",
+  "engines": {
+    "node": "11.12.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "MONGO_USER=Ayomide MONGO_PASSWORD=eyNecHX5g8B3LGHp MONGO_DATABASE=videoRental JWT_SECRET=(*@)r&^g!@$@)#$(&)($u5752124ih@)&@!$y)g node app.js",
+    "start-dev": "nodemon app.js"
   },
   "author": "ayomide dosumu",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "easyinvoice": "^1.0.108",
     "express": "^4.17.1",
     "g": "^2.0.1",
+    "helmet": "^4.4.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.11.9",
+    "morgan": "^1.10.0",
     "multer": "^1.4.2",
-    "nodemon": "^2.0.6"
+    "nodemon": "^2.0.6",
+    "pdfkit": "^0.11.0"
   }
 }

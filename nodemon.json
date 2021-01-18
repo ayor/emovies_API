@@ -1,0 +1,9 @@
+{
+    "env":{
+        "MONGO_USER" : "Ayomide",
+        "MONGO_PASSWORD" : "eyNecHX5g8B3LGHp",
+        "MONGO_DATABASE" : "videoRental",
+        "JWT_SECRET": "(*@)r&^g!@$@)#$(&)($u5752124ih@)&@!$y)g",
+       
+    }
+}

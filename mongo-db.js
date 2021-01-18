@@ -1,4 +1,5 @@
 
-const MONGODB_URI = 'mongodb+srv://Ayomide:eyNecHX5g8B3LGHp@testcluster.ayixn.mongodb.net/videoRental?retryWrites=true&w=majority';
-const JWT_SECRET = '(*@)r&^g!@$@)#$(&)($u5752124ih@)&@!$y)g'
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@testcluster.ayixn.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`;
+const JWT_SECRET = process.env.JWT_SECRET
 module.exports = { MONGODB_URI, JWT_SECRET };
+

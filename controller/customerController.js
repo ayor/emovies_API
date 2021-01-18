@@ -10,7 +10,9 @@ exports.getUserInfo = async (req, res, next) => {
         throw error;
     }
     try {
-        const customer = await Customer.findOne({ _id: userId });
+        const customer = await Customer.findById(userId)
+        .populate('orders');
+        
 
         if (!customer) {
             const error = new Error('User does not exist ');
